@@ -1,0 +1,106 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"); */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: rgb(54, 28, 28);
+}
+
+html{
+    overflow: none;
+}
+
+:root{
+    --main-bg-color: rgb(241, 233, 233);
+     --pri-bg-color: rgb(54, 28, 28);;
+     --logo-font: 'Cormorant Upright', serif;
+     --header-font: 'Cormorant Infant', serif;
+     --body-font: 'EB Garamond', serif;
+}
+
+footer{
+  margin-top: 10rem;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+  /* background-color: violet; */
+  position: relative;
+  font-family: var(--body-font);
+}
+
+.footerDiv{
+  width: 100vw;
+ background-color: wheat;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+place-items: center;
+position: relative;
+
+}
+
+.item{
+  /* background-color: yellow; */
+  width: fit-content;
+  display: grid;
+  place-items: center;
+ 
+}
+
+.item > ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+.item > h3{
+  font-size: 2rem;
+  font-family: var(--header-font);
+  cursor: pointer;
+}
+
+.item > ul > li{
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.itemSocial{
+  display: grid;
+  place-items: center;
+}
+
+.itemSocialIcon{
+  /* background-color: yellowgreen; */
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.icon{
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-right: 3rem;
+  border: solid 2px;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.copyright{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 650px){
+  .footerDiv{
+    width: 100vw;
+   grid-template-columns: 1fr;
+
+  }
+
+ 
+}

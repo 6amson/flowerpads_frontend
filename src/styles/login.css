@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: rgb(54, 28, 28);
+}
+
+html{
+    overflow: none;
+}
+
+:root{
+   --main-bg-color: rgb(241, 233, 233);
+    --pri-bg-color: rgb(54, 28, 28);;
+    --logo-font: 'Cormorant Upright', serif;
+    --header-font: 'Libre Baskerville', serif;
+    --body-font: 'EB Garamond', serif;
+}
+
+.signupDiv{
+    /* background-color: blue; */
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.signupDiv1{
+    /* background-color: blueviolet; */
+
+}
+
+.signupDiv2{
+    /* background-color: rgb(43, 125, 226); */
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.sunflower{
+    /* background-color: cadetblue; */
+    width: 80%;   
+}
+
+.signupDiv1Inner{
+    /* background-color: chartreuse; */
+    width: 100%;
+   height: 100%;
+   display: grid;
+  place-items: center;
+  position: relative;
+ 
+ 
+}
+
+.formDiv1 > input{
+    font-size: 1em;
+    margin: 0.5em 0;
+    padding: 1em;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 0.5em;    
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    background-color: transparent;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.formDiv1 > input:nth-child(2){
+    margin-bottom: 2rem;
+}
+
+
+.formDiv1 > input:nth-child(6){
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0.7em;
+    letter-spacing: 0.05em;
+    margin-top: 3em;
+    width: 80%;
+}
+
+
+.formDiv1{
+    display: grid;
+    padding: 1rem;
+    width: 80%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.passworderror, .emailerror{
+    position: absolute;
+    font-family: var(--body-font);
+    color: red;
+    font-size: 1.5rem;
+    left: 1.3rem;
+}
+
+.emailerror{
+    top: 7rem;
+  
+}
+
+.passworderror{
+    top: 15rem;
+}
+
+.signupButLogin{
+    
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    bottom: 18rem;
+    align-items: center;
+    font-family: var(--body-font); 
+}
+
+.signupButLogin > p:first-child{
+    color: var(--pri-bg-color);  
+    
+}
+
+.signupButLogin > p{
+    font-size: 1.5rem;
+}
+
+.linkuplogin{
+    font-size: 1.5rem;
+    color: orchid;
+    font-weight: bolder;
+}
+
+.linkup{
+    text-decoration: none;
+}
+
+.sunflowerForm{
+    display: none;
+}
+
+
+
+
+
+/*************MEDIA QUERIES************************/
+
+@media screen and (max-width: 850px){
+    .sunflower{
+        /* background-color: cadetblue; */
+        width: 80%;   
+        position: absolute;
+    }
+
+    .signupDiv{
+        grid-template-columns: 1fr 0.5fr;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .signupDiv{
+        grid-template-columns: 1fr;
+    }
+
+   
+
+    .sunflower{
+        display: none;
+    }
+
+    .sunflowerForm{
+        display: flex;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .navigationUnordered > li{
+        padding: 0;
+    }
+
+    .navigationUnordered{
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+    }
+
+    .navigationIn > p{
+        display: none;    
+    }
+}

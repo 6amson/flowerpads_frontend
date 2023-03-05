@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Rest from './components/Rest'
+import Home from './components/Home'
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import Bouquet from "./components/Bouquet";
+import Vase from "./components/Vase";
+import Plant from "./components/Plant";
+import Notfound from "./components/Notfound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path='/test' element={< Rest />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/' element={< Home />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/signup' element={< Signup />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/login' element={< Login />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/bouquet' element={< Bouquet />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/plant' element={< Plant />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/vase' element={< Vase />}></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/pagenotfound' element={< Notfound />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

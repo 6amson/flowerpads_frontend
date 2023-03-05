@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: rgb(54, 28, 28);
+}
+
+html{
+    overflow: none;
+}
+
+:root{
+    --main-bg-color: rgb(241, 233, 233);
+     --pri-bg-color: rgb(54, 28, 28);;
+     --logo-font: 'Cormorant Upright', serif;
+     --header-font: 'Libre Baskerville', serif;
+     --body-font: 'EB Garamond', serif;
+}
+
+.containerBouquetDiv{
+    position: relative;
+    background-color: rgb(241, 233, 233);
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    z-index: 10000;
+    overflow-x: hidden;
+    
+
+}
+
+.bodyDiv{
+    padding: 5rem;
+    margin-top: 10rem;
+    height: fit-content;
+}
+
+
+
+.bodyDiv > p{
+    /* background-color: wheat; */
+    font-size: 2rem;
+    font-family: var(--header-font);
+    height: fit-content;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+.bodyDivCollections{
+    /* background-color: rgb(231, 47, 47); */
+    display: grid;
+    margin-bottom: 20rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    font-family: var(--body-font);
+    height: fit-content;
+    width: 100%;
+}
+
+.fill {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 100,
+    'GRAD' 200,
+    'opsz' 24
+}
+
+.like{
+    color: red;
+}
+
+.bodyDivCollections1{
+    /* background-color: rgb(170, 130, 238); */
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border:solid 1px rgb(0, 0, 0);
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem grey;
+    transition: transform .2s ease, filter .2s ease;
+}
+
+.bouquetDiv{
+    /* position: relative;
+    background-color: yellow; */
+    width: 100%;
+    height: 40rem;
+    border-radius: 1rem 1rem 0 0
+}
+
+.bouquet1{
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 1rem 1rem 0 0;
+    
+}
+
+.bodyDivCollections1:hover{
+    transform: scale(1.03, 1.03);
+
+    filter: brightness(80%);
+}
+
+.bodyDivCollections2{
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.bodyDivCollections2 > p{
+    font-size: 2rem;
+    
+}
+
+.symbol{
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.symbol:first-child{
+
+    margin-right: 1rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .bodyDivCollections{
+       
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 750px){
+    .bodyDivCollections{
+       
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media screen and (max-width: 560px){
+    .bodyDivCollections{
+       
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+

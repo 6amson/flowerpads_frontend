@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0");
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: rgb(54, 28, 28);
+}
+
+html{
+    overflow: none;
+}
+
+:root{
+    /* --vv-bg-color: #C4A381;
+    --ww-bg-color: #BBD686;
+    --xx-bg-color: #D5E4A2;
+    --yy-bg-color: #E2EBB0;
+    --zz-bg-color: #EEF1BD; */
+
+    --main-bg-color: rgb(241, 233, 233);
+    --pri-bg-color: rgb(54, 28, 28);;
+    --logo-font: 'Cormorant Upright', serif;
+    --header-font: 'Libre Baskerville', serif;
+    --body-font: 'EB Garamond', serif;
+}
+
+.strayDiv{
+    width: 35%;
+    height: 106vh;
+    background-color: rgb(221, 200, 220);
+    z-index: -100000000000000000;
+    position: absolute;
+    margin-top: -3rem;
+    right: 25rem;
+
+}
+
+.container{
+    background-color: rgb(198, 47, 47);
+    position: relative;
+    background-color: rgb(241, 233, 233);
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+
+.bouquetDiv{
+    /* background-color: turquoise; */
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+/* .jana{
+    background-color: yellow;
+    width: 30rem;
+    height: 100%;
+    position: relative;
+    bottom: 10rem;
+} */
+
+.everbloom{
+    position: absolute;
+    right: 1rem;
+    bottom: 8rem;
+    rotate: -20deg;
+    opacity: 0;
+    transition: opacity 4s ease;
+}
+
+.markus{
+    /* background-color: violet; */
+    width: 11rem;
+    top: -9.4rem;
+    left: 26.4rem;
+    position: absolute;
+    z-index: -2;
+}
+.bodyDiv{
+  
+    position: relative;
+    height: 50vh;
+
+}
+
+.bodyDivParagraph{
+    /* background-color: violet; */
+    position: relative;
+    top: 5rem;
+    width: min(80%, 70rem);
+    left: 10rem; 
+    z-index: 1000;
+
+
+}
+
+.bodyDivParagraph > p:first-child{
+text-transform: uppercase;
+font-size: 5rem;
+font-weight: bolder;
+font-family: var(--header-font);
+margin-bottom: 2rem;
+}
+
+.bodyDivParagraph > p:first-child > span{
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: bolder;
+    font-family: var(--header-font);
+    color: orchid;
+    }
+
+.bodyDivParagraph > p:nth-child(2){
+    font-size: 2rem;
+    font-family: var(--body-font);
+    font-weight: 200;
+}
+
+.explorePage{
+    /* background-color: aqua; */
+    margin-top: 4rem;
+    display: flex;
+    width: fit-content;
+}
+
+.explorePage1, .explorePage2{
+border: solid 1px orchid;
+padding: 1.5rem 2.1rem;
+border-radius: 0.7rem;
+margin-right: 4rem;
+box-shadow: 1px 1px 1px rgb(0, 0, 0);
+cursor: pointer;
+}
+
+.explorePage1{
+    background-color: orchid;
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+}
+
+.explorePage2{
+  
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.explorePage1 > p{
+    color: white;
+}
+
+.explorePage2 > p{
+    color: black;
+}
+
+.explorePage1 > p, .explorePage2 > p{
+    font-size: 1.7rem;
+ 
+}
+
+.shoppingBag{
+    margin-left: 1rem;
+    color: white;
+    padding-bottom: rem;
+
+}
+
+
+
+
+
+
+/*********************MEDIA QUERIES***********************/
+@media screen and (max-width: 860px){
+    .larisa{
+        opacity: 0.2;
+    }
+}
+
+
+@media screen and (max-width: 560px){
+    .larisa{
+        position: absolute;
+       right: -4rem;
+        bottom: -50rem;
+        rotate: -20deg;
+        opacity: 1;
+    }
+
+    .bodyDivParagraph{
+
+        left: 2rem; 
+    }
+
+    .bodyDiv{
+  
+        position: relative;
+        bottom: 10rem;
+    }
+
+    
+.bodyDivParagraph > p:first-child{
+    font-size: 3rem;
+    }
+    
+    .bodyDivParagraph > p:first-child > span{
+        font-size: 3rem;
+        color: orchid;
+        }
+    
+    .bodyDivParagraph > p:nth-child(2){
+        font-size: 2rem;
+    }
+
+    .markus{
+        width: 9rem;
+        top: -8.6rem;
+        left: 14.6rem;
+        position: absolute;
+        z-index: -2;
+    }
+
+    .anemone{
+        top: -46rem;
+        left: 6rem;
+    }
+}
+
+
+@media screen and (max-width: 610px){
+    .explorePage1{
+        background-color: orchid;
+        display: flex;
+        position: relative;
+        align-items: center;
+        
+    }
+    
+    
+    .explorePage1 > p, .explorePage2 > p{
+        font-size: 1.3rem;
+     
+    }
+    
+    .shoppingBag{
+        margin-left: 1rem;
+        color: white;
+        font-size: 1.6rem;
+    
+    }
+
+    .explorePage1, .explorePage2{
+       
+        padding: 1rem 3rem;
+        border-radius: 0.7rem;
+        margin-right: 4rem;
+        
+}
+.explorePage2{
+    width: 12.9rem;
+
+    text-align: center;
+    
+}
+
+.strayDiv{
+   
+    right: 15rem;
+
+}
+}
+
+
+@media screen and (max-width: 730px){
+    .bodyDiv{
+  
+        position: relative;
+        bottom: 5rem;
+    }
+}
