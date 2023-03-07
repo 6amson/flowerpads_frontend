@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
-
+import { useNavigate, useLocation } from 'react-router-dom';
+import axios from 'axios';
+import cookies from 'js-cookie';
 import Nav from './Nav2'
 import vase1 from '../img/vases/vase1.jpg'
 import vase2 from '../img/vases/vase2.jpg'
@@ -18,6 +19,51 @@ import Footer from './footer';
 
 
 export default function Vase() {
+    const navigate = useNavigate();
+
+    const [isLogged, setIsLogged] = useState(false);
+
+    const [marginLeft, setMarginLeft] = useState('')
+
+    const myelement = useRef(null);
+
+    const location = useLocation();
+
+    useEffect(() => {
+
+        const handleAuth = async () => {
+            const currentLocation = location.pathname;
+            const token = cookies.get('PersonUser');
+            console.log(token);
+    
+            axios.get('http://localhost:3005/getauth', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((res) => {
+    
+                // console.log(res)
+                if (res.status == 200) {
+                    navigate(`${currentLocation}`);
+                    setIsLogged(true);
+    
+    
+                } else {
+                    navigate('/login')
+                }
+    
+            }).catch((err) => {
+                console.log(err);
+                navigate('/login')
+            })
+        }
+
+        handleAuth();
+
+    }, [])
+
+
+
     return(
         <div className='containerBouquet'>
         <div className='containerSmall'>

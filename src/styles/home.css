@@ -166,6 +166,7 @@ cursor: pointer;
 
 .explorePage2 > p{
     color: black;
+    font-family: var(--body-font);
 }
 
 .explorePage1 > p, .explorePage2 > p{

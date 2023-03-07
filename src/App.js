@@ -12,29 +12,29 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
+        {/* <Routes>
           <Route exact path='/test' element={< Rest />}></Route>
-        </Routes>
+        </Routes> */}
         <Routes>
           <Route exact path='/' element={< Home />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/signup' element={< Signup />}></Route>
+          <Route path='/signup' element={< Signup />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/login' element={< Login />}></Route>
+          <Route path='/login' element={< Login />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/bouquet' element={< Bouquet />}></Route>
+          <Route path='/bouquet' element={< Bouquet />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/plant' element={< Plant />}></Route>
+          <Route path='/plant' element={< Plant />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/vase' element={< Vase />}></Route>
+          <Route path='/vase' element={< Vase />}></Route>
         </Routes>
         <Routes>
-          <Route exact path='/pagenotfound' element={< Notfound />}></Route>
+          <Route element={< Notfound />}></Route>
         </Routes>
       </div>
     </Router>

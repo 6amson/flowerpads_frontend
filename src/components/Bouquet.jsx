@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-
-import { useMediaQuery } from 'react-responsive';
 import '../styles/bouquet.css';
 import Nav from './Nav2';
 import bouquet1 from '../img/bouquet/bouquet1.jpg'
@@ -15,15 +13,17 @@ import bouquet8 from '../img/bouquet/bouquet8.jpg'
 import bouquet9 from '../img/bouquet/bouquet9.jpg'
 import bouquet10 from '../img/bouquet/bouquet10.jpg'
 import Footer from './footer';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import cookies from 'js-cookie'
 
 
 
 
-export default function Bouquet() {
-    const styles = {
-        fontWeight: 'bolder'
-    }
+export default function Bouquet() { 
+    const navigate = useNavigate();
+
+    const [isLogged, setIsLogged] = useState(false);
 
     const [marginLeft, setMarginLeft] = useState('')
 
@@ -32,12 +32,38 @@ export default function Bouquet() {
     const location = useLocation();
 
     useEffect(() => {
-        if(location.pathname === '/bouquet' || location.pathname === '/vase' || location.pathname === '/plant'){
-            console.log(location.pathname)
-            
 
+        const handleAuth = async () => {
+            const currentLocation = location.pathname;
+            const token = cookies.get('PersonUser');
+            console.log(token);
+    
+            axios.get('http://localhost:3005/getauth', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((res) => {
+    
+                // console.log(res)
+                if (res.status == 200) {
+                    navigate(`${currentLocation}`);
+                    setIsLogged(true);
+    
+    
+                } else {
+                    navigate('/login')
+                }
+    
+            }).catch((err) => {
+                console.log(err);
+                navigate('/login')
+            })
         }
+
+        handleAuth();
+
     }, [])
+  
   
     return (
         <div className='containerBouquetDiv'>

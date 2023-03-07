@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
-
+import { useNavigate, useLocation } from 'react-router-dom';
+import axios from 'axios';
 import Nav from './Nav2'
-
+import cookies from 'js-cookie'
 import plant1 from '../img/plants/plant1.jpg'
 import plant2 from '../img/plants/plant2.jpg'
 import plant3 from '../img/plants/plant3.jpg'
@@ -19,6 +19,51 @@ import Footer from './footer';
 
 
 export default function Plant() {
+    const navigate = useNavigate();
+
+    const [isLogged, setIsLogged] = useState(false);
+
+    const [marginLeft, setMarginLeft] = useState('')
+
+    const myelement = useRef(null);
+
+    const location = useLocation();
+
+    useEffect(() => {
+
+        const handleAuth = async () => {
+            const currentLocation = location.pathname;
+            const token = cookies.get('PersonUser');
+            console.log(token);
+    
+            axios.get('http://localhost:3005/getauth', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            }).then((res) => {
+    
+                // console.log(res)
+                if (res.status == 200) {
+                    navigate(`${currentLocation}`);
+                    setIsLogged(true);
+    
+    
+                } else {
+                    navigate('/login')
+                }
+    
+            }).catch((err) => {
+                console.log(err);
+                navigate('/login')
+            })
+        }
+
+        handleAuth();
+
+    }, [])
+
+
+
     return(
         <div className='containerBouquet'>
         <div className='containerSmall'>

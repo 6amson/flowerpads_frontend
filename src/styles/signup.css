@@ -100,7 +100,7 @@ html{
 .passworderror, .emailerror{
     position: absolute;
     font-family: var(--body-font);
-    color: red;
+    color: rgb(137, 10, 10);
     font-size: 1.5rem;
     left: 1.3rem;
 }

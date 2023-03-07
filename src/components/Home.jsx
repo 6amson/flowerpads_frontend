@@ -1,17 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import '../styles/home.css';
 import Nav from './Nav'
 import markus from '../img/markus.png'
 import everbloom from '../img/everbloomHome.png'
+import axios from 'axios';
+import cookies from 'js-cookie';
 
 
 
 
 export default function Home() {
 
-
+    const navigate = useNavigate();
     const [opacity, setOpacity] = useState('1');
     const [mopacity, setMopacity] = useState('0');
 
@@ -19,6 +22,10 @@ export default function Home() {
 
     const myelement = useRef(null);
     const myelement1 = useRef(null);
+
+    const handleshop = () => {
+        navigate('/signup')
+    }
 
     useEffect(() => {
         const myElement = myelement.current;
@@ -46,10 +53,10 @@ export default function Home() {
                         <p>Let's help you<span><img className='markus' alt='anemone' src={markus} /></span> <span>curate</span> a bouquet.</p>
                         <p>A wide selection of flower for every occasion</p>
                         <div className='explorePage'>
-                            <div className='explorePage1'><p>Shop</p><span className="material-symbols-rounded shoppingBag">
+                            <div className='explorePage1' onClick={handleshop}><p>Shop</p><span className="material-symbols-rounded shoppingBag">
                                 shopping_bag
                             </span></div>
-                            <div className='explorePage2'><p>Learn More</p></div>
+                            <div className='explorePage2' onClick={handleshop}><p>Learn More</p></div>
                         </div>
                     </div>
                     <div className='bodyDivImage'>
