@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import '../styles/nav2.css';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
@@ -11,13 +11,24 @@ import { useNavigate } from 'react-router-dom';
 export default function Nav() {
     const navigate = useNavigate();
 
-    const [isLogged, setIsLogged] = useState(false);
-    //    let isLogged;
-    const [dataLink, setDataLink] = useState('')
+    // const [isLogged, setIsLogged] = useState(false);
+    var isLogged;
+     
+       function setisLogged(){       
+        isLogged = true;
+     }
+
+     function setisNotLogged(){       
+        isLogged = false;
+     }
+    
 
     const handleAuth = async (e) => {
         const token = cookies.get('PersonUser');
         console.log(token);
+        if(token == 'undefined'){
+            setisNotLogged()
+        }
 
         // setDataLink(e.target.getAttribute('data-src'));
         const data = e.target.getAttribute('data-src');
@@ -29,12 +40,14 @@ export default function Nav() {
             }
         }).then((res) => {
 
-            // console.log(res)
-            if (res.status == 200) {
+            console.log(res)
+            
+            if (res.status === 200) {
+                setisLogged()
                 navigate(`/${data}`);
-                setIsLogged(true);
-
-
+                console.log(isLogged);
+                
+                              
             } else {
                 navigate('/login')
             }
@@ -45,11 +58,17 @@ export default function Nav() {
         })
     }
 
+    useEffect(() => {
+        handleAuth();
+
+    }, [])
 
     const logOut = () => {
         const token = cookies.get('PersonUser');
         if(token){
             cookies.remove('PersonUser');
+            // setIsLogged(false);
+            setisNotLogged();
             console.log('cookie removed');
             navigate('/');
         }else{
@@ -84,7 +103,11 @@ export default function Nav() {
             </div>
             <div>
             {
-                    isLogged ? (
+                    !isLogged ? (
+                        <p className='logout' onClick={logOut}>Logout</p>
+                       
+
+                    ) : (
                         <div className='navigationIn'>
                             <div><span class="material-symbols-rounded navlogos">
                                 person
@@ -104,9 +127,6 @@ export default function Nav() {
                                 </span>
                             </div>
                         </div>
-
-                    ) : (
-                        <p className='logout' onClick={logOut}>Logout</p>
                     )
                 }
             </div>

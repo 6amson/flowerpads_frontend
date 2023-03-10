@@ -38,9 +38,11 @@ html{
     justify-content: space-between;
     padding: 2rem;
     margin-top: 4rem;
+    position: relative;
 }
 
-.navigationUnordered{
+.navigationUnorderedd{
+    position: relative;
     list-style-type: none;
     display: flex;
     /* color: whitesmoke; */
@@ -125,7 +127,7 @@ Link{
     cursor: pointer;
 }
 
-.logout{
+.logoutt{
     background-color: orchid;
     padding: 1rem;
     font-family: var(--body-font);
@@ -149,28 +151,30 @@ color: white;
         display: none;    
     }
 
-    .navigationUnordered > li{
+    .navigationUnorderedd > li{
+        padding: 0;
         padding: 0.5em;
     }
-}
 
-
-@media screen and (max-width: 560px){
-    .navigationUnordered > li{
-        padding: 0;
-    }
-
-    .navigationUnordered{
-        margin-left: 2rem;
+    .navigationUnorderedd{
         margin-top: 0.5rem;
     }
+
+    .navigationParagraph{
+        font-size: 2rem;
+        left: 0rem;
+        top: 0.5rem
+        
+    }
+
+   
 }
 
 
 @media screen and (max-width: 610px){
     .navigationParagraph{
        margin-top: 0.8rem;
-        margin-left: 1rem;
+        margin-left: -1rem;
     }
 
     .navMenu{
@@ -181,12 +185,12 @@ color: white;
 
     }
 
-    .logout{
+    .logoutt{
+        padding: 0.5rem;
         position: relative;
-        padding: 0.6rem;
-        top: 1rem;
+        /* background-color: yellowgreen; */
         left: -2rem;
-        margin-right: 0.5rem;
+        top: 1rem;
     }
 
     .navlogos{
@@ -197,9 +201,9 @@ color: white;
 
 
 @media screen and (max-width: 420px){
-    .navigationParagraph{
+    /* .navigationParagraph{
         margin-top: 0.8rem;
          margin-left: -1.5rem;
-     }
+     } */
 }
 

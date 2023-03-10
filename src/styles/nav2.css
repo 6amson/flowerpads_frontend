@@ -129,11 +129,32 @@ color: white;
 
     .navigationUnordered > li{
         padding: 0.5em;
+        
+    }
+
+    .navigationUnordered{
+        position: relative;
+        left: -3rem;
+    }
+
+    .navigationPara{
+        font-size: 2rem;
+        left: -2rem;
+        top: 0.5rem;
+       
+    }
+
+    .logout{
+        padding: 0.5rem;
+        position: relative;
+        /* background-color: yellowgreen; */
+        left: -3rem;
+        top: 1rem;
     }
 }
 
 
-@media screen and (max-width: 560px){
+/* @media screen and (max-width: 560px){
     .navigationUnordered > li{
         padding: 0;
     }
@@ -142,7 +163,7 @@ color: white;
         margin-left: 2rem;
         margin-top: 0.5rem;
     }
-}
+} */
 
 
 @media screen and (max-width: 610px){
@@ -168,9 +189,9 @@ color: white;
 
 
 @media screen and (max-width: 420px){
-    .navigationParagraph{
+    /* .navigationParagraph{
         margin-top: 0.8rem;
          margin-left: -1.5rem;
-     }
+     } */
 }
 

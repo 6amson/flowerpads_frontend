@@ -21,7 +21,7 @@ import Footer from './footer';
 export default function Plant() {
     const navigate = useNavigate();
 
-    const [isLogged, setIsLogged] = useState(false);
+    // const [isLogged, setIsLogged] = useState(false);
 
     const [marginLeft, setMarginLeft] = useState('')
 
@@ -45,7 +45,7 @@ export default function Plant() {
                 // console.log(res)
                 if (res.status == 200) {
                     navigate(`${currentLocation}`);
-                    setIsLogged(true);
+                    // setIsLogged(true);
     
     
                 } else {

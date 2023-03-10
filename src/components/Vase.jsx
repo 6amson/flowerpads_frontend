@@ -21,7 +21,7 @@ import Footer from './footer';
 export default function Vase() {
     const navigate = useNavigate();
 
-    const [isLogged, setIsLogged] = useState(false);
+   
 
     const [marginLeft, setMarginLeft] = useState('')
 
@@ -43,10 +43,9 @@ export default function Vase() {
             }).then((res) => {
     
                 // console.log(res)
+               
                 if (res.status == 200) {
                     navigate(`${currentLocation}`);
-                    setIsLogged(true);
-    
     
                 } else {
                     navigate('/login')

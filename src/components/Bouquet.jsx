@@ -23,7 +23,7 @@ import cookies from 'js-cookie'
 export default function Bouquet() { 
     const navigate = useNavigate();
 
-    const [isLogged, setIsLogged] = useState(false);
+    // const [isLogged, setIsLogged] = useState(false);
 
     const [marginLeft, setMarginLeft] = useState('')
 
@@ -47,7 +47,7 @@ export default function Bouquet() {
                 // console.log(res)
                 if (res.status == 200) {
                     navigate(`${currentLocation}`);
-                    setIsLogged(true);
+                    // setIsLogged(true);
     
     
                 } else {

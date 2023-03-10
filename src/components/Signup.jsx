@@ -16,7 +16,8 @@ export default function Signup() {
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
     const handlechangeemail = (e) => {
         setemail(e.target.value);
     }
@@ -48,7 +49,7 @@ export default function Signup() {
             // const token = res.headers['set-cookie'];
             console.log(res);
             const token = res.data;
-            cookies.set('PersonUser', token, { secure: true, expires: 1});
+            cookies.set('PersonUser', token, { secure: true, expires: 1, httpOnly: true});
             
             if(res.status == 201){
                 navigate('/bouquet')
