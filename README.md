@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+## Flowerpads
+
+# A flower, vase amd plant ordering site.
+
+The mainstay of this project is exploring authentication process. The backend and frontend are hosted differently, the frontend; made with react makes calls to the endpoints and stores the token as cookies. Axios, Express, js-cookie, jwt and cors are some of the dependencies in this project.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +78,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
