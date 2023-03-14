@@ -38,7 +38,7 @@ export default function Bouquet() {
             const token = cookies.get('PersonUser');
             console.log(token);
     
-            axios.get('http://localhost:3005/getauth', {
+            axios.get('https://flowerpadsbackend.netlify.app/.netlify/functions/index/getauth', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

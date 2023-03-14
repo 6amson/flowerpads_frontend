@@ -34,7 +34,7 @@ export default function Nav() {
         const data = e.target.getAttribute('data-src');
         // console.log(e.target.getAttribute('data-src'));
 
-        axios.get('http://localhost:3005/getauth', {
+        axios.get('https://flowerpadsbackend.netlify.app/.netlify/functions/index/getauth', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

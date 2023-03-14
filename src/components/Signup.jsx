@@ -16,6 +16,8 @@ export default function Signup() {
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
 
+    const path = 'https://flowerpadsbackend.netlify.app/.netlify/functions/index/';
+
     const navigate = useNavigate();
     
     const handlechangeemail = (e) => {
@@ -38,7 +40,7 @@ export default function Signup() {
         const datum = JSON.stringify(data)
         // console.log(datum)
 
-        axios.post('http://localhost:3005/signup', datum, {
+        axios.post(`https://flowerpadsbackend.netlify.app/.netlify/functions/index/signup`, datum, {
             // withCredentials: true,
             // crossDomain: true,
             headers: {

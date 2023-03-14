@@ -37,7 +37,7 @@ export default function Login() {;
 
 
         //call to the server to check loggedin users
-        axios.post('http://localhost:3005/login', datum, {
+        axios.post('https://flowerpadsbackend.netlify.app/.netlify/functions/index/login', datum, {
             // withCredentials: true,
             // crossDomain: true,
             headers: {
