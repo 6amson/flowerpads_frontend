@@ -148,7 +148,7 @@ color: white;
         padding: 0.5rem;
         position: relative;
         /* background-color: yellowgreen; */
-        left: -3rem;
+        left: -4rem;
         top: 1rem;
     }
 }
@@ -169,7 +169,7 @@ color: white;
 @media screen and (max-width: 610px){
     .navigationPara{
        margin-top: 0.8rem;
-        margin-left: 1.2rem;
+    margin-left: 1.2rem;
     }
 
     
