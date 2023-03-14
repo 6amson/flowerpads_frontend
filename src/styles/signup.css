@@ -95,6 +95,12 @@ html{
     width: 80%;
     display: grid;
     place-items: center;
+    top: -7rem;
+}
+
+.registerDiv{
+    font-family: var(--header-font);
+    font-size: 1.5rem;
 }
 
 .passworderror, .emailerror{

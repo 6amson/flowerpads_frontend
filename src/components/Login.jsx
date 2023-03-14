@@ -79,6 +79,7 @@ export default function Login() {;
                 <div className="signupDiv">
                     <div className="signupDiv1">
                         <div className="signupDiv1Inner">
+                        <h3 className='registerDiv'>Login into your account. </h3>
                             <form className='formDiv1'>
                             <img alt="sunflower" className="sunflower sunflowerForm" src={sunflower} />
                                 <input required='required' type='email' onChange={handlechangeemail} placeholder='email'></input>

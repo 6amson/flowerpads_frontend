@@ -94,6 +94,7 @@ export default function Signup() {
                 <div className="signupDiv">
                     <div className="signupDiv1">
                         <div className="signupDiv1Inner">
+                            <h3 className='registerDiv'>Register with us. </h3>
                             <form className='formDiv'>
                                 <img alt="sunflower" className="sunflower sunflowerForm" src={sunflower} />
                                 {/* <input required='required' type='text' onChange={handlechangefn} placeholder='first name'></input>
