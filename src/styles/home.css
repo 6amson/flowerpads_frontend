@@ -84,8 +84,8 @@ html{
 .markus{
     /* background-color: violet; */
     width: 11rem;
-    top: -9.4rem;
-    left: 26.4rem;
+    top: -9.7rem;
+    left: 39.8rem;
     position: absolute;
     z-index: -2;
 }
@@ -231,7 +231,7 @@ cursor: pointer;
     .markus{
         width: 9rem;
         top: -8.6rem;
-        left: 14.6rem;
+        left: 17.7rem;
         position: absolute;
         z-index: -2;
     }
