@@ -5,9 +5,8 @@ import { useMediaQuery } from 'react-responsive';
 import '../styles/home.css';
 import Nav from './Nav'
 import markus from '../img/markus.png'
-import everbloom from '../img/everbloomHome.png'
-import axios from 'axios';
-import cookies from 'js-cookie';
+import everbloom from '../img/everbloom.png'
+
 
 
 
@@ -16,7 +15,7 @@ export default function Home() {
 
     const navigate = useNavigate();
     const [opacity, setOpacity] = useState('1');
-    const [mopacity, setMopacity] = useState('0');
+    const [mopacity, setMopacity] = useState('1');
 
     const isSmallScreen = useMediaQuery({ query: '(max-width: 1300px)' });
 
