@@ -54,7 +54,7 @@ Link{
 
 .navigationParagraph{
     position: relative;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: var(--logo-font);
     font-weight: 400;
     color: #91178d;
@@ -67,7 +67,7 @@ Link{
 }
 
 .linkup > li{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-right: 2rem;
     font-family: var(--body-font);
     font-weight: 400;

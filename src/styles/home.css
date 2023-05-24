@@ -126,7 +126,7 @@ margin-bottom: 2rem;
     }
 
 .bodyDivParagraph > p:nth-child(2){
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-family: var(--body-font);
     font-weight: 200;
 }
@@ -193,6 +193,10 @@ cursor: pointer;
     .larisa{
         opacity: 0.2;
     }
+
+    .everbloom{
+        display: none;
+    }
 }
 
 
@@ -218,16 +222,16 @@ cursor: pointer;
 
     
 .bodyDivParagraph > p:first-child{
-    font-size: 3rem;
-    }
+    font-size: 3.5rem;
+}
     
-    .bodyDivParagraph > p:first-child > span{
+.bodyDivParagraph > p:first-child > span{
         font-size: 3rem;
         color: orchid;
-        }
+}
     
     .bodyDivParagraph > p:nth-child(2){
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .markus{
