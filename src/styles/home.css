@@ -222,7 +222,7 @@ cursor: pointer;
 
     
 .bodyDivParagraph > p:first-child{
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
     
 .bodyDivParagraph > p:first-child > span{
@@ -271,31 +271,27 @@ cursor: pointer;
     
     }
 
-    .explorePage1, .explorePage2{
+.explorePage1, .explorePage2{
        
-        padding: 1rem 3rem;
-        border-radius: 0.7rem;
-        margin-right: 4rem;
+    padding: 1rem 3rem;
+    border-radius: 0.7rem;
+    margin-right: 4rem;
         
 }
 .explorePage2{
     width: 12.9rem;
-
     text-align: center;
     
 }
 
 .strayDiv{
-   
     right: 15rem;
-
 }
 }
 
 
 @media screen and (max-width: 730px){
     .bodyDiv{
-  
         position: relative;
         bottom: 5rem;
     }

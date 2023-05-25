@@ -50,7 +50,7 @@ export default function Home() {
                 <div className='bodyDiv'>
                     <div className='bodyDivParagraph'>
                         <p>Let's help you<span><img className='markus' alt='anemone' src={markus} /></span> <span>curate</span> a bouquet.</p>
-                        <p>A wide selection of flower for every occasion</p>
+                        <p>A wide selection of flowers for every occasion</p>
                         <div className='explorePage'>
                             <div className='explorePage1' onClick={handleshop}><p>Shop</p><span className="material-symbols-rounded shoppingBag">
                                 shopping_bag
